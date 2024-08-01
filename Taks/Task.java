@@ -58,6 +58,7 @@ public class Task {
     public void addComment(){
         listcomment.add(1);
         //esta complicado
+        //No se puede
     }
     
 }
