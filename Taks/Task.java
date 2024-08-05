@@ -17,7 +17,7 @@ public class Task {
     private String description;
     private boolean complet;
     private User user;
-    private ArrayList<Commet> coment;
+    private ArrayList<Commet> comments;
 
     public int getId() {
         return id;
@@ -35,28 +35,27 @@ public class Task {
         return user;
     }
 
-    public ArrayList<Commet> getComent() {
-        return coment;
+    public ArrayList<Commet> getComments() {
+        return comments;
     }
 
     public void setComplet(boolean complet) {
         this.complet = complet;
     }
+    
+    public void addComment(Commet comment){
+        comments.add(comment);
+    }
 
-    public Task(int id, String description, String complet, User user) {
+    public Task(int id, String description, User user) {
         this.id = id;
         this.description = description;
         this.complet = false;
         this.user = user;
-        this.coment = new ArrayList();
+        this.comments = new ArrayList();
     }
-    
-    public Task(){
-        this(0,"",new User(),new ArrayList());
+
+    public Task() {
+        this(0,"",new User());
     }
-    
-   public void agregarEstudiante(Task task) {
-        task.add(task);
-    }
-    
 }

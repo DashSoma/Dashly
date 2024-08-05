@@ -6,6 +6,7 @@ package Proyects;
 
 import Taks.Task;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
@@ -14,22 +15,41 @@ import java.util.ArrayList;
 public class Proyect {
 private int id;
     private String name;
-    private ArrayList<Task> task;
+    private HashSet<Task> task;
 
-    
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public HashSet<Task> getTask() {
+        return task;
+    }
+
     public Proyect(int id, String name) {
         this.id = id;
         this.name = name;
-        this.task = new ArrayList();
+        this.task = new HashSet();
     }
-//juanito loquito
+
     public Proyect() {
+        this(0,"");
+    }
+    
+    public void task(Task tasks){
+        task.add(tasks);
+    }
+    
+    public int CantidadTareas(){
+       return task.size();
+    }
+    
+    public void Completadas(){
         
     }
-    
-    public void addTask(Task task){
-       Task.add(task); 
-    }
-    
-
 }
+
+
