@@ -28,7 +28,7 @@ private int id;
     }
     
     public void addTask(Task task){
-        
+       Task.add(task); 
     }
     
 

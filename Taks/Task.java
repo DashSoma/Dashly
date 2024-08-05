@@ -55,10 +55,8 @@ public class Task {
         this(0,"",new User(),new ArrayList());
     }
     
-    public void addComment(){
-        listcomment.add(1);
-        //esta complicado
-        //No se puede
+   public void agregarEstudiante(Task task) {
+        task.add(task);
     }
     
 }
