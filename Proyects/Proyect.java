@@ -22,7 +22,7 @@ private int id;
         this.name = name;
         this.task = new ArrayList();
     }
-
+//juanito loquito
     public Proyect() {
         
     }
