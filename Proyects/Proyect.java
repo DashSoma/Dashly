@@ -39,17 +39,38 @@ private int id;
         this(0,"");
     }
     
-    public void task(Task tasks){
+    public void agregartask(Task tasks){
         task.add(tasks);
     }
     
-    public int CantidadTareas(){
+    public int CantidadTask(){
        return task.size();
     }
-    
-    public void Completadas(){
-        
+     
+    public int getCompletedTaskCount() {
+        int completedCount = 0;
+        for (Task task : task) {
+            if (task.isComplet()) {
+                completedCount++;
+            }
+        }
+        return completedCount;
     }
+    
+    public double getCompletedTaskPercentage() {
+        if (task.isEmpty()) {
+            return 0.0;
+        }
+        int completedCount = 0;
+        for (Task task : task) {
+            if (task.isComplet()) {
+                completedCount++;
+            }
+        }
+        return (completedCount / (double) task.size()) * 100;
+    }
+    
 }
+
 
 
