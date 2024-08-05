@@ -55,8 +55,8 @@ public class Task {
         this(0,"",new User(),new ArrayList());
     }
     
-   public void agregarEstudiante(Task task) {
-        task.add(task);
+   public void agregarComentario(User user) {
+        coment.add(User);
     }
     
 }
