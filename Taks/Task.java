@@ -58,4 +58,12 @@ public class Task {
     public Task() {
         this(0,"",new User());
     }
+<<<<<<< HEAD
+=======
+    
+   public void agregarComentario(User user) {
+        coment.add(User);
+    }
+    
+>>>>>>> ad89b8e8426818e3e3bee20b17ca6cb0e20b0a7e
 }
